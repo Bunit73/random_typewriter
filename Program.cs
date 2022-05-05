@@ -17,7 +17,7 @@ public class Result
 
 public class Program
 {
-    const string WORD = "Money";
+    const string WORD = "Monkey";
 
     // Main Method
     static public void Main()
@@ -37,10 +37,50 @@ public class Program
         Console.WriteLine($"Total Threads available {workerThreads}");
 
         DateTime programStart = DateTime.Now;
+
+
+        # region whole word
+        Console.WriteLine("Whole Word Random Gen");
         DateTime startTime = DateTime.Now;
-        Console.WriteLine("Start Time {0}", startTime);
+        // Parallel.For(0, workerThreads,
+        // parallelOptions,
+        // // using shared variable in parallel loop
+        // // https://stackoverflow.com/questions/43690168/using-shared-variable-in-parallel-for
+        // () => new Result(),
+        // (i, state, result) =>
+        // {
+        //     Console.WriteLine($"Started process on Thread {Thread.CurrentThread.ManagedThreadId}");
+        //     tc++;
+        //     while (!result.found && !state.IsStopped)
+        //     {
+        //         result.found = (WORD == KeyGenerator.GetUniqueKey(WORD.Length));
+        //     };
 
 
+
+        //     if (result.found && !state.IsStopped)
+        //     {
+        //         Console.WriteLine($"Found {WORD} on Thread {Thread.CurrentThread.ManagedThreadId}");
+        //         // https://dotnettutorials.net/lesson/parallel-for-method-csharp/
+        //         state.Stop();
+        //         Console.WriteLine($"Stop Called on {Thread.CurrentThread.ManagedThreadId} \nTotal Threads Running: {tc}");
+        //     }
+
+        //     return result;
+        // },
+        //     result => { }
+        // );
+
+        DateTime endTime = DateTime.Now;
+        TimeSpan ts = endTime - startTime;
+        // Console.WriteLine("Run Time {0}ms", ts.TotalMilliseconds);
+
+        # endregion
+
+
+        # region Letter By Letter
+        Console.WriteLine("Letter By Letter Random Gen");
+        startTime = DateTime.Now;
         Parallel.For(0, workerThreads,
         parallelOptions,
         // using shared variable in parallel loop
@@ -50,12 +90,28 @@ public class Program
         {
             Console.WriteLine($"Started process on Thread {Thread.CurrentThread.ManagedThreadId}");
             tc++;
+
+            var currentWord = "";
             while (!result.found && !state.IsStopped)
             {
-                result.found = (WORD == KeyGenerator.GetUniqueKey(WORD.Length));
+                currentWord += KeyGenerator.GetUniqueKey(1);
+
+                // check to see if match
+                if (currentWord == WORD)
+                {
+                    Console.WriteLine(currentWord);
+                    result.found = true;
+                }
+
+                for (var j = 0; j < currentWord.Length; j++)
+                {
+                    if (currentWord[j] != WORD[j])
+                    {
+                        currentWord = "";
+                        break;
+                    }
+                }
             };
-
-
 
             if (result.found && !state.IsStopped)
             {
@@ -70,14 +126,11 @@ public class Program
             result => { }
         );
 
-        DateTime endTime = DateTime.Now;
-        Console.WriteLine("End Time {0}", startTime);
 
-        TimeSpan ts = endTime - startTime;
-        Console.WriteLine("Run Time {0}ms", ts.TotalMilliseconds);
-
+        #endregion
 
         DateTime programEnd = DateTime.Now;
+
         ts = programEnd - programStart;
         Console.WriteLine("Total Run Time {0}ms", ts.TotalMilliseconds);
     }
