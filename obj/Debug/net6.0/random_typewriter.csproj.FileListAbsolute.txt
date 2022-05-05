@@ -1,0 +1,15 @@
+/home/ben/Code/random_typewriter/bin/Debug/net6.0/random_typewriter
+/home/ben/Code/random_typewriter/bin/Debug/net6.0/random_typewriter.deps.json
+/home/ben/Code/random_typewriter/bin/Debug/net6.0/random_typewriter.runtimeconfig.json
+/home/ben/Code/random_typewriter/bin/Debug/net6.0/random_typewriter.dll
+/home/ben/Code/random_typewriter/bin/Debug/net6.0/random_typewriter.pdb
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/random_typewriter.csproj.AssemblyReference.cache
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/random_typewriter.GeneratedMSBuildEditorConfig.editorconfig
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/random_typewriter.AssemblyInfoInputs.cache
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/random_typewriter.AssemblyInfo.cs
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/random_typewriter.csproj.CoreCompileInputs.cache
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/random_typewriter.dll
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/refint/random_typewriter.dll
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/random_typewriter.pdb
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/random_typewriter.genruntimeconfig.cache
+/home/ben/Code/random_typewriter/obj/Debug/net6.0/ref/random_typewriter.dll
