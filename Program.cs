@@ -23,6 +23,27 @@ public class Program
     static public void Main()
     {
 
+        #region set console output
+        // https://stackoverflow.com/questions/4470700/how-to-save-console-writeline-output-to-text-file
+        FileStream ostrm;
+        StreamWriter writer;
+        TextWriter oldOut = Console.Out;
+        try
+        {
+            ostrm = new FileStream("./Output.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            writer = new StreamWriter(ostrm);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("Cannot open Output.txt for writing");
+            Console.WriteLine(e.Message);
+            return;
+        }
+
+        Console.SetOut(writer);
+
+        #endregion
+
         int workerThreads;
         int portThreads;
         var tc = 0;
@@ -42,34 +63,34 @@ public class Program
         # region whole word
         Console.WriteLine("Whole Word Random Gen");
         DateTime startTime = DateTime.Now;
-        // Parallel.For(0, workerThreads,
-        // parallelOptions,
-        // // using shared variable in parallel loop
-        // // https://stackoverflow.com/questions/43690168/using-shared-variable-in-parallel-for
-        // () => new Result(),
-        // (i, state, result) =>
-        // {
-        //     Console.WriteLine($"Started process on Thread {Thread.CurrentThread.ManagedThreadId}");
-        //     tc++;
-        //     while (!result.found && !state.IsStopped)
-        //     {
-        //         result.found = (WORD == KeyGenerator.GetUniqueKey(WORD.Length));
-        //     };
+        Parallel.For(0, workerThreads,
+        parallelOptions,
+        // using shared variable in parallel loop
+        // https://stackoverflow.com/questions/43690168/using-shared-variable-in-parallel-for
+        () => new Result(),
+        (i, state, result) =>
+        {
+            Console.WriteLine($"Started process on Thread {Thread.CurrentThread.ManagedThreadId}");
+            tc++;
+            while (!result.found && !state.IsStopped)
+            {
+                result.found = (WORD == KeyGenerator.GetUniqueKey(WORD.Length));
+            };
 
 
 
-        //     if (result.found && !state.IsStopped)
-        //     {
-        //         Console.WriteLine($"Found {WORD} on Thread {Thread.CurrentThread.ManagedThreadId}");
-        //         // https://dotnettutorials.net/lesson/parallel-for-method-csharp/
-        //         state.Stop();
-        //         Console.WriteLine($"Stop Called on {Thread.CurrentThread.ManagedThreadId} \nTotal Threads Running: {tc}");
-        //     }
+            if (result.found && !state.IsStopped)
+            {
+                Console.WriteLine($"Found {WORD} on Thread {Thread.CurrentThread.ManagedThreadId}");
+                // https://dotnettutorials.net/lesson/parallel-for-method-csharp/
+                state.Stop();
+                Console.WriteLine($"Stop Called on {Thread.CurrentThread.ManagedThreadId} \nTotal Threads Running: {tc}");
+            }
 
-        //     return result;
-        // },
-        //     result => { }
-        // );
+            return result;
+        },
+            result => { }
+        );
 
         DateTime endTime = DateTime.Now;
         TimeSpan ts = endTime - startTime;
@@ -133,6 +154,10 @@ public class Program
 
         ts = programEnd - programStart;
         Console.WriteLine("Total Run Time {0}ms", ts.TotalMilliseconds);
+        Console.SetOut(oldOut);
+        writer.Close();
+        ostrm.Close();
+        Console.WriteLine("Finished");
     }
 
 }
