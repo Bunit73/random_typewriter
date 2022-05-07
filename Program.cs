@@ -57,7 +57,7 @@ public static class Program
 
         var programStart = DateTime.Now;
 
-        for (var c = 1; c <= 5; c++)
+        for (var c = 1; c <= 10; c++)
         {
             Console.WriteLine($"Iteration {c}");
             foreach (var word in Words)
