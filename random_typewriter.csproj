@@ -7,4 +7,25 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\random_typewriter.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0\random_typewriter.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\Debug\net6.0\apphost" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.AssemblyInfoInputs.cache" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.assets.cache" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.dll" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.GeneratedMSBuildEditorConfig.editorconfig" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.genruntimeconfig.cache" />
+    <Content Include="obj\Debug\net6.0\random_typewriter.pdb" />
+    <Content Include="obj\Debug\net6.0\refint\random_typewriter.dll" />
+    <Content Include="obj\Debug\net6.0\ref\random_typewriter.dll" />
+  </ItemGroup>
+
 </Project>

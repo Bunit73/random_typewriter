@@ -1,27 +1,29 @@
-﻿using System;
-using System.Threading;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
+namespace random_typewriter;
 
 public class Result
 {
     public Result()
     {
-        found = false;
+        Found = false;
     }
 
-    public bool found;
+    public bool Found;
 }
 
 
-public class Program
+public static class Program
 {
-    const string WORD = "Monkey";
 
     // Main Method
-    static public void Main()
+    public static void Main()
     {
+        var Words = new List<string>(){"A", "Be", "Cee", "Dead", "Edgie"};
+        DateTime startTime;
+        DateTime endTime;
+        TimeSpan ts;
 
         #region set console output
         // https://stackoverflow.com/questions/4470700/how-to-save-console-writeline-output-to-text-file
@@ -44,113 +46,123 @@ public class Program
 
         #endregion
 
-        int workerThreads;
-        int portThreads;
         var tc = 0;
 
-        ThreadPool.GetMaxThreads(out workerThreads, out portThreads);
+        ThreadPool.GetMaxThreads(out var workerThreads, out _);
 
         ParallelOptions parallelOptions = new()
         {
             // MaxDegreeOfParallelism = 2
         };
 
-        Console.WriteLine($"Total Threads available {workerThreads}");
+        var programStart = DateTime.Now;
 
-        DateTime programStart = DateTime.Now;
-
-
-        # region whole word
-        Console.WriteLine("Whole Word Random Gen");
-        DateTime startTime = DateTime.Now;
-        Parallel.For(0, workerThreads,
-        parallelOptions,
-        // using shared variable in parallel loop
-        // https://stackoverflow.com/questions/43690168/using-shared-variable-in-parallel-for
-        () => new Result(),
-        (i, state, result) =>
+        for (var c = 1; c <= 5; c++)
         {
-            Console.WriteLine($"Started process on Thread {Thread.CurrentThread.ManagedThreadId}");
-            tc++;
-            while (!result.found && !state.IsStopped)
+            Console.WriteLine($"Iteration {c}");
+            foreach (var word in Words)
             {
-                result.found = (WORD == KeyGenerator.GetUniqueKey(WORD.Length));
-            };
-
-
-
-            if (result.found && !state.IsStopped)
-            {
-                Console.WriteLine($"Found {WORD} on Thread {Thread.CurrentThread.ManagedThreadId}");
-                // https://dotnettutorials.net/lesson/parallel-for-method-csharp/
-                state.Stop();
-                Console.WriteLine($"Stop Called on {Thread.CurrentThread.ManagedThreadId} \nTotal Threads Running: {tc}");
-            }
-
-            return result;
-        },
-            result => { }
-        );
-
-        DateTime endTime = DateTime.Now;
-        TimeSpan ts = endTime - startTime;
-        // Console.WriteLine("Run Time {0}ms", ts.TotalMilliseconds);
-
-        # endregion
-
-
-        # region Letter By Letter
-        Console.WriteLine("Letter By Letter Random Gen");
-        startTime = DateTime.Now;
-        Parallel.For(0, workerThreads,
-        parallelOptions,
-        // using shared variable in parallel loop
-        // https://stackoverflow.com/questions/43690168/using-shared-variable-in-parallel-for
-        () => new Result(),
-        (i, state, result) =>
-        {
-            Console.WriteLine($"Started process on Thread {Thread.CurrentThread.ManagedThreadId}");
-            tc++;
-
-            var currentWord = "";
-            while (!result.found && !state.IsStopped)
-            {
-                currentWord += KeyGenerator.GetUniqueKey(1);
-
-                // check to see if match
-                if (currentWord == WORD)
-                {
-                    Console.WriteLine(currentWord);
-                    result.found = true;
-                }
-
-                for (var j = 0; j < currentWord.Length; j++)
-                {
-                    if (currentWord[j] != WORD[j])
+                # region whole word
+                Console.WriteLine("Whole Word Random Gen");
+                startTime = DateTime.Now;
+                Parallel.For(0, workerThreads,
+                    parallelOptions,
+                    // using shared variable in parallel loop
+                    // https://stackoverflow.com/questions/43690168/using-shared-variable-in-parallel-for
+                    () => new Result(),
+                    (i, state, result) =>
                     {
-                        currentWord = "";
-                        break;
-                    }
-                }
-            };
+                        // Console.WriteLine($"Started process on Thread {Thread.CurrentThread.ManagedThreadId}");
+                        tc++;
+                        while (!result.Found && !state.IsStopped)
+                        {
+                            result.Found = (word == KeyGenerator.GetUniqueKey(word.Length));
+                        };
 
-            if (result.found && !state.IsStopped)
-            {
-                Console.WriteLine($"Found {WORD} on Thread {Thread.CurrentThread.ManagedThreadId}");
-                // https://dotnettutorials.net/lesson/parallel-for-method-csharp/
-                state.Stop();
-                Console.WriteLine($"Stop Called on {Thread.CurrentThread.ManagedThreadId} \nTotal Threads Running: {tc}");
+
+
+                        if (result.Found && !state.IsStopped)
+                        {
+                            Console.WriteLine($"Found {word} on Thread {Environment.CurrentManagedThreadId}");
+                            // https://dotnettutorials.net/lesson/parallel-for-method-csharp/
+                            state.Stop();
+                            Console.WriteLine($"Stop Called on {Environment.CurrentManagedThreadId} \nTotal Threads Running: {tc}");
+                        }
+
+                        return result;
+                    },
+                    result => { }
+                );
+
+                endTime = DateTime.Now;
+                ts = endTime - startTime;
+                Console.WriteLine("Whole word run time {0}ms", ts.TotalMilliseconds);
+
+                # endregion
+
+                Console.WriteLine("----------------------------------------\n");
+
+                # region Letter By Letter
+                Console.WriteLine("Letter By Letter Random Gen");
+                startTime = DateTime.Now;
+                Parallel.For(0, workerThreads,
+                    parallelOptions,
+                    // using shared variable in parallel loop
+                    // https://stackoverflow.com/questions/43690168/using-shared-variable-in-parallel-for
+                    () => new Result(),
+                    (i, state, result) =>
+                    {
+                        // Console.WriteLine($"Started process on Thread {Environment.CurrentManagedThreadId}");
+                        tc++;
+
+                        var currentWord = "";
+                        while (!result.Found && !state.IsStopped)
+                        {
+                            currentWord += KeyGenerator.GetUniqueKey(1);
+
+                            // check to see if match
+                            if (currentWord == word)
+                            {
+                                Console.WriteLine(currentWord);
+                                result.Found = true;
+                            }
+
+                            for (var j = 0; j < currentWord.Length; j++)
+                            {
+                                if (currentWord[j] != word[j])
+                                {
+                                    currentWord = "";
+                                    break;
+                                }
+                            }
+                        };
+
+                        if (result.Found && !state.IsStopped)
+                        {
+                            Console.WriteLine($"Found {word} on Thread {Environment.CurrentManagedThreadId}");
+                            // https://dotnettutorials.net/lesson/parallel-for-method-csharp/
+                            state.Stop();
+                            Console.WriteLine($"Stop Called on {Environment.CurrentManagedThreadId} \nTotal Threads Running: {tc}");
+                        }
+
+                        return result;
+                    },
+                    result => { }
+                );
+                endTime = DateTime.Now;
+                ts = endTime - startTime;
+                Console.WriteLine("Letter by letter run time {0}ms", ts.TotalMilliseconds);
+
+                #endregion
+
             }
-
-            return result;
-        },
-            result => { }
-        );
-
-
-        #endregion
-
-        DateTime programEnd = DateTime.Now;
+        
+        }
+        #region wrapup
+        
+        Console.WriteLine("----------------------------------------\n");
+        
+        var programEnd = DateTime.Now;
 
         ts = programEnd - programStart;
         Console.WriteLine("Total Run Time {0}ms", ts.TotalMilliseconds);
@@ -158,11 +170,12 @@ public class Program
         writer.Close();
         ostrm.Close();
         Console.WriteLine("Finished");
+        #endregion
     }
 
 }
 
-public class KeyGenerator
+public static class KeyGenerator
 {
     // https://stackoverflow.com/questions/1344221/how-can-i-generate-random-alphanumeric-strings
     internal static readonly char[] chars =

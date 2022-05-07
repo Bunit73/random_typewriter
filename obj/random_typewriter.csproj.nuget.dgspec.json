@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/ben/Code/random_typewriter/random_typewriter.csproj": {}
+    "/Users/ben/RiderProjects/random_typewriter/random_typewriter.csproj": {}
   },
   "projects": {
-    "/home/ben/Code/random_typewriter/random_typewriter.csproj": {
+    "/Users/ben/RiderProjects/random_typewriter/random_typewriter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ben/Code/random_typewriter/random_typewriter.csproj",
+        "projectUniqueName": "/Users/ben/RiderProjects/random_typewriter/random_typewriter.csproj",
         "projectName": "random_typewriter",
-        "projectPath": "/home/ben/Code/random_typewriter/random_typewriter.csproj",
-        "packagesPath": "/home/ben/.nuget/packages/",
-        "outputPath": "/home/ben/Code/random_typewriter/obj/",
+        "projectPath": "/Users/ben/RiderProjects/random_typewriter/random_typewriter.csproj",
+        "packagesPath": "/Users/ben/.nuget/packages/",
+        "outputPath": "/Users/ben/RiderProjects/random_typewriter/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ben/.nuget/NuGet/NuGet.Config"
+          "/Users/ben/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.2.21505.57/RuntimeIdentifierGraph.json"
         }
       }
     }

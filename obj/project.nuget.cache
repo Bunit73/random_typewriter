@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PjqDD1O6y44VGzEPo2N9YtcqdrWnB0TnDxVI8o9je8z/kMS0RlfZfmpk+nFaf5CjmlDuBfTJTvixohWiboraKQ==",
+  "dgSpecHash": "JaH9pG2HVJdwZgKBdXgd7Np5+2Fly2zUgLd0pAjfZ9vqtXClWgrKoGypKjCW0mJM68CaItVFiEHfO2bWv2EVog==",
   "success": true,
-  "projectFilePath": "/home/ben/Code/random_typewriter/random_typewriter.csproj",
+  "projectFilePath": "/Users/ben/RiderProjects/random_typewriter/random_typewriter.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
