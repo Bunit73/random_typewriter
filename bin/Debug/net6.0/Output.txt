@@ -1,0 +1,564 @@
+Iteration 1
+Whole Word Random Gen
+Found A on Thread 1
+Stop Called on 1 
+Total Threads Running: 1
+Whole word run time 21.159ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+Found A on Thread 5
+Stop Called on 5 
+Total Threads Running: 2
+Letter by letter run time 0.478ms
+Whole Word Random Gen
+Found Be on Thread 11
+Stop Called on 11 
+Total Threads Running: 13
+Whole word run time 0.932ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 12
+Stop Called on 12 
+Total Threads Running: 22
+Letter by letter run time 0.079ms
+Whole Word Random Gen
+Found Cee on Thread 9
+Stop Called on 9 
+Total Threads Running: 31
+Whole word run time 48.215ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 1
+Stop Called on 1 
+Total Threads Running: 40
+Letter by letter run time 45.351ms
+Whole Word Random Gen
+Found Dead on Thread 21
+Stop Called on 21 
+Total Threads Running: 61
+Whole word run time 15647.635ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 9
+Stop Called on 9 
+Total Threads Running: 82
+Letter by letter run time 6496.9ms
+Iteration 2
+Whole Word Random Gen
+Found A on Thread 26
+Stop Called on 26 
+Total Threads Running: 90
+Whole word run time 0.104ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+A
+A
+Found A on Thread 1
+Stop Called on 1 
+Total Threads Running: 101
+Found A on Thread 24
+Stop Called on 24 
+Total Threads Running: 101
+Found A on Thread 18
+Stop Called on 18 
+Total Threads Running: 101
+Letter by letter run time 2.394ms
+Whole Word Random Gen
+Found Be on Thread 5
+Stop Called on 5 
+Total Threads Running: 117
+Whole word run time 1.012ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 1
+Stop Called on 1 
+Total Threads Running: 132
+Letter by letter run time 0.992ms
+Whole Word Random Gen
+Found Cee on Thread 5
+Stop Called on 5 
+Total Threads Running: 153
+Whole word run time 105.66ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 1
+Stop Called on 1 
+Total Threads Running: 175
+Letter by letter run time 27.066ms
+Whole Word Random Gen
+Found Dead on Thread 17
+Stop Called on 17 
+Total Threads Running: 197
+Whole word run time 1289.551ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 11
+Stop Called on 11 
+Total Threads Running: 219
+Letter by letter run time 12057.446ms
+Iteration 3
+Whole Word Random Gen
+Found A on Thread 16
+Found A on Thread 21
+Found A on Thread 20
+Stop Called on 21 
+Total Threads Running: 228
+Stop Called on 20 
+Total Threads Running: 228
+Stop Called on 16 
+Total Threads Running: 228
+Whole word run time 0.075ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+A
+Found A on Thread 11
+Stop Called on 11 
+Total Threads Running: 234
+Found A on Thread 25
+Stop Called on 25 
+Total Threads Running: 234
+A
+Letter by letter run time 0.037ms
+Whole Word Random Gen
+Found Be on Thread 21
+Stop Called on 21 
+Total Threads Running: 256
+Whole word run time 2.253ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 17
+Stop Called on 17 
+Total Threads Running: 266
+Letter by letter run time 1.243ms
+Whole Word Random Gen
+Found Cee on Thread 5
+Stop Called on 5 
+Total Threads Running: 288
+Whole word run time 174.889ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 8
+Stop Called on 8 
+Total Threads Running: 310
+Letter by letter run time 8.88ms
+Whole Word Random Gen
+Found Dead on Thread 1
+Stop Called on 1 
+Total Threads Running: 332
+Whole word run time 983.37ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 8
+Stop Called on 8 
+Total Threads Running: 354
+Letter by letter run time 449.672ms
+Iteration 4
+Whole Word Random Gen
+Found A on Thread 1
+Stop Called on 1 
+Total Threads Running: 355
+Whole word run time 0.038ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+Found A on Thread 18
+A
+Stop Called on 18 
+Total Threads Running: 361
+Letter by letter run time 0.077ms
+Whole Word Random Gen
+Found Be on Thread 19
+Stop Called on 19 
+Total Threads Running: 381
+Whole word run time 0.305ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 20
+Stop Called on 20 
+Total Threads Running: 393
+Letter by letter run time 0.503ms
+Whole Word Random Gen
+Found Cee on Thread 1
+Stop Called on 1 
+Total Threads Running: 415
+Whole word run time 32.815ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 25
+Stop Called on 25 
+Total Threads Running: 436
+Letter by letter run time 56.28ms
+Whole Word Random Gen
+Found Dead on Thread 12
+Stop Called on 12 
+Total Threads Running: 458
+Whole word run time 2638.933ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 18
+Stop Called on 18 
+Total Threads Running: 480
+Letter by letter run time 15809.141ms
+Iteration 5
+Whole Word Random Gen
+Found A on Thread 9
+Found A on Thread 11
+Stop Called on 9 
+Total Threads Running: 485
+Stop Called on 11 
+Total Threads Running: 485
+Whole word run time 0.023ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+A
+Found A on Thread 10
+Stop Called on 10 
+Total Threads Running: 492
+Found A on Thread 27
+Stop Called on 27 
+Total Threads Running: 492
+Letter by letter run time 0.061ms
+Whole Word Random Gen
+Found Be on Thread 5
+Stop Called on 5 
+Total Threads Running: 510
+Whole word run time 1.905ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 12
+Stop Called on 12 
+Total Threads Running: 526
+Letter by letter run time 0.614ms
+Whole Word Random Gen
+Found Cee on Thread 24
+Stop Called on 24 
+Total Threads Running: 548
+Whole word run time 104.766ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 24
+Stop Called on 24 
+Total Threads Running: 570
+Letter by letter run time 58.87ms
+Whole Word Random Gen
+Found Dead on Thread 10
+Stop Called on 10 
+Total Threads Running: 594
+Whole word run time 9963.305ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 10
+Stop Called on 10 
+Total Threads Running: 618
+Letter by letter run time 4561.5ms
+Iteration 6
+Whole Word Random Gen
+Found A on Thread 5
+Stop Called on 5 
+Total Threads Running: 624
+Whole word run time 0.06ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+A
+Found A on Thread 27
+Stop Called on 27 
+Total Threads Running: 631
+Found A on Thread 23
+Stop Called on 23 
+Total Threads Running: 631
+Letter by letter run time 0.056ms
+Whole Word Random Gen
+Found Be on Thread 19
+Stop Called on 19 
+Total Threads Running: 641
+Whole word run time 0.061ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 13
+Stop Called on 13 
+Total Threads Running: 657
+Letter by letter run time 1.395ms
+Whole Word Random Gen
+Found Cee on Thread 29
+Stop Called on 29 
+Total Threads Running: 681
+Whole word run time 184.316ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 28
+Stop Called on 28 
+Total Threads Running: 706
+Letter by letter run time 45.816ms
+Whole Word Random Gen
+Found Dead on Thread 15
+Stop Called on 15 
+Total Threads Running: 736
+Whole word run time 24145.234ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 9
+Stop Called on 9 
+Total Threads Running: 766
+Letter by letter run time 4286.646ms
+Iteration 7
+Whole Word Random Gen
+Found A on Thread 1
+Stop Called on 1 
+Total Threads Running: 773
+Whole word run time 0.136ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+Found A on Thread 1
+Stop Called on 1 
+Total Threads Running: 775
+Letter by letter run time 0.006ms
+Whole Word Random Gen
+Found Be on Thread 11
+Stop Called on 11 
+Total Threads Running: 805
+Whole word run time 2.728ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 26
+Stop Called on 26 
+Total Threads Running: 813
+Letter by letter run time 0.287ms
+Whole Word Random Gen
+Found Cee on Thread 33
+Stop Called on 33 
+Total Threads Running: 843
+Whole word run time 38.003ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 8
+Stop Called on 8 
+Total Threads Running: 873
+Letter by letter run time 127.007ms
+Whole Word Random Gen
+Found Dead on Thread 3
+Stop Called on 3 
+Total Threads Running: 903
+Whole word run time 5523.573ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 13
+Stop Called on 13 
+Total Threads Running: 932
+Letter by letter run time 1567.513ms
+Iteration 8
+Whole Word Random Gen
+Found A on Thread 24
+Stop Called on 24 
+Total Threads Running: 939
+Whole word run time 0.134ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+Found A on Thread 13
+Stop Called on 13 
+Total Threads Running: 942
+Letter by letter run time 0.039ms
+Whole Word Random Gen
+Found Be on Thread 30
+Stop Called on 30 
+Total Threads Running: 952
+Whole word run time 1.015ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 13
+Stop Called on 13 
+Total Threads Running: 973
+Letter by letter run time 4.362ms
+Whole Word Random Gen
+Found Cee on Thread 12
+Stop Called on 12 
+Total Threads Running: 1003
+Whole word run time 115.553ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 8
+Stop Called on 8 
+Total Threads Running: 1032
+Letter by letter run time 65.613ms
+Whole Word Random Gen
+Found Dead on Thread 28
+Stop Called on 28 
+Total Threads Running: 1061
+Whole word run time 408.553ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 31
+Stop Called on 31 
+Total Threads Running: 1090
+Letter by letter run time 12286.135ms
+Iteration 9
+Whole Word Random Gen
+Found A on Thread 22
+Stop Called on 22 
+Total Threads Running: 1097
+Whole word run time 0.027ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+Found A on Thread 5
+Stop Called on 5 
+Total Threads Running: 1103
+Letter by letter run time 0.014ms
+Whole Word Random Gen
+Found Be on Thread 18
+Stop Called on 18 
+Total Threads Running: 1112
+Whole word run time 0.359ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 34
+Stop Called on 34 
+Total Threads Running: 1120
+Letter by letter run time 0.209ms
+Whole Word Random Gen
+Found Cee on Thread 27
+Stop Called on 27 
+Total Threads Running: 1149
+Whole word run time 27.721ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 18
+Stop Called on 18 
+Total Threads Running: 1178
+Letter by letter run time 9.914ms
+Whole Word Random Gen
+Found Dead on Thread 16
+Stop Called on 16 
+Total Threads Running: 1207
+Whole word run time 6684.05ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 27
+Stop Called on 27 
+Total Threads Running: 1236
+Letter by letter run time 14020.88ms
+Iteration 10
+Whole Word Random Gen
+Found A on Thread 17
+Stop Called on 17 
+Total Threads Running: 1246
+Whole word run time 0.103ms
+----------------------------------------
+
+Letter By Letter Random Gen
+A
+Found A on Thread 9
+Stop Called on 9 
+Total Threads Running: 1253
+Letter by letter run time 0.02ms
+Whole Word Random Gen
+Found Be on Thread 25
+Stop Called on 25 
+Total Threads Running: 1273
+Whole word run time 1.74ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Be
+Found Be on Thread 21
+Stop Called on 21 
+Total Threads Running: 1299
+Letter by letter run time 1.663ms
+Whole Word Random Gen
+Found Cee on Thread 28
+Stop Called on 28 
+Total Threads Running: 1328
+Whole word run time 282.714ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Cee
+Found Cee on Thread 25
+Stop Called on 25 
+Total Threads Running: 1344
+Letter by letter run time 0.594ms
+Whole Word Random Gen
+Found Dead on Thread 16
+Stop Called on 16 
+Total Threads Running: 1394
+Whole word run time 9243.032ms
+----------------------------------------
+
+Letter By Letter Random Gen
+Dead
+Found Dead on Thread 23
+Stop Called on 23 
+Total Threads Running: 1444
+Letter by letter run time 9567.209ms
+----------------------------------------
+
+Total Run Time 159286.742ms
