@@ -20,7 +20,7 @@ public static class Program
     // Main Method
     public static void Main()
     {
-        var Words = new List<string>(){"A", "Be", "Cee", "Dead", "Edgie"};
+        var Words = new List<string>(){"A", "Be", "Cee", "Dead"};
         DateTime startTime;
         DateTime endTime;
         TimeSpan ts;
