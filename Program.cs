@@ -20,7 +20,7 @@ public static class Program
     // Main Method
     public static void Main()
     {
-        var Words = new List<string>(){"A", "Be", "Cee", "Dead"};
+        var Words = new List<string>() { "A", "Be", "Cee", "Dead" };
         DateTime startTime;
         DateTime endTime;
         TimeSpan ts;
@@ -59,9 +59,11 @@ public static class Program
 
         for (var c = 1; c <= 10; c++)
         {
+            Console.WriteLine("----------------------------------------");
             Console.WriteLine($"Iteration {c}");
             foreach (var word in Words)
             {
+                Console.WriteLine("----------------------------------------\n");
                 # region whole word
                 Console.WriteLine("Whole Word Random Gen");
                 startTime = DateTime.Now;
@@ -99,8 +101,6 @@ public static class Program
                 Console.WriteLine("Whole word run time {0}ms", ts.TotalMilliseconds);
 
                 # endregion
-
-                Console.WriteLine("----------------------------------------\n");
 
                 # region Letter By Letter
                 Console.WriteLine("Letter By Letter Random Gen");
@@ -156,12 +156,12 @@ public static class Program
                 #endregion
 
             }
-        
+
         }
         #region wrapup
-        
+
         Console.WriteLine("----------------------------------------\n");
-        
+
         var programEnd = DateTime.Now;
 
         ts = programEnd - programStart;
